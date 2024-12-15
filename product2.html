@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product 1 - Details</title>
+    <title>Product 2 - Details</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -13,6 +13,47 @@
             color: #fff;
             background-color: #000;
             scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+            background-color: #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fdbb2d;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fdbb2d;
         }
 
         section {
@@ -52,6 +93,7 @@
         }
 
         .btn {
+            display: inline-block;
             margin-top: 2rem;
             padding: 1rem 2rem;
             background: #fff;
@@ -79,29 +121,44 @@
     </style>
 </head>
 <body>
+    <!-- 添加的顶部导航栏 -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">My Portfolio</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product1.html">Product</a></li>
+            <li><a href="product2.html">Interaction</a></li>
+            <li><a href="product3.html">Industrial</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <section class="image1">
         <div>
-            <h1>Product 2</h1>
-            <p>Experience the ultimate innovation with Product 1. Designed to perfection for an unparalleled user experience.</p>
-            <a href="index.html" class="btn">Back to Home</a>
+            <h1>Interaction design</h1>
+            <p>Experience the ultimate innovation with Science and technology. Designed to perfection for an unparalleled user experience.</p>
         </div>
     </section>
 
     <section class="image2">
         <div>
             <h1>Exceptional Design</h1>
-            <p>Crafted with precision and elegance, Product 1 redefines what it means to blend technology and design.</p>
+            <p>Crafted with precision and elegance, Science and technology redefines what it means to blend technology and design.</p>
         </div>
     </section>
 
     <section class="image3">
         <div>
             <h1>Performance Redefined</h1>
-            <p>Product 1 offers performance beyond imagination, delivering the speed and efficiency you’ve always desired.</p>
+            <p>Product offers performance beyond imagination, delivering the speed and efficiency you’ve always desired.</p>
         </div>
     </section>
 
+    <!-- Footer，添加“Back to Home”按钮 -->
     <footer>
+        <a href="index.html" class="btn">Back to Home</a>
         <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
 </body>
