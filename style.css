@@ -1,0 +1,289 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    transition: all 0.3s ease; /* 全局过渡效果 */
+}
+
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fdbb2d;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease; /* 悬停颜色过渡 */
+}
+
+.navbar .nav-links a:hover {
+    color: #fdbb2d;
+}
+
+.navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #fdbb2d;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%;
+}
+
+/* 汉堡菜单样式（用于移动端） */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Hero 区域样式 */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #fdbb2d;
+    margin-right: 2rem;
+}
+
+.hero img:hover {
+    transform: scale(1.05); /* 图片悬停放大 */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Projects 区域样式 */
+.projects-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #fdbb2d;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    background: #262626;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px); /* 卡片悬浮效果 */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* 增强阴影 */
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #fdbb2d;
+    transition: transform 0.3s ease; /* 图片悬停放大 */
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project:hover h3 {
+    color: #fdbb2d; /* 标题悬停变色 */
+}
+
+.project p {
+    margin: 0 1rem 1rem;
+    color: #bbb;
+}
+
+/* Footer 样式 */
+footer {
+    background: #000;
+    color: #888;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+/* 技能表格样式 */
+.skills-table {
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+.skills-table h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #fdbb2d;
+}
+
+/* 表格样式 */
+.skills-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.skills-table th {
+    background-color: #333;
+    color: #fdbb2d;
+    text-align: center;
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background-color: #262626;
+}
+
+.skills-table tbody tr:hover {
+    background-color: #333;
+}
+
+/* 进度条样式 */
+.progress-bar {
+    display: inline-block;
+    height: 10px;
+    width: 70%;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(135deg, #fdbb2d, #ff6347);
+    width: var(--progress);
+    transition: width 0.5s ease-in-out;
+}

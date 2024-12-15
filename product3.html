@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 3 - Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #fff;
+            background-color: #000;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+            background-color: #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fdbb2d;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fdbb2d;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image1 {
+            background: url('product3-image1.jpg') no-repeat center/cover;
+        }
+
+        .image2 {
+            background: url('product3-image2.jpg') no-repeat center/cover;
+        }
+
+        .image3 {
+            background: url('product3-image3.jpg') no-repeat center/cover;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #fff;
+            color: #000;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #333;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #000;
+            color: #888;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 添加的顶部导航栏 -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">My Portfolio</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product1.html">Product 1</a></li>
+            <li><a href="product2.html">Product 2</a></li>
+            <li><a href="product3.html">Product 3</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="image1">
+        <div>
+            <h1>Product 3</h1>
+            <p>Experience the ultimate innovation with Product 3. Designed to perfection for an unparalleled user experience.</p>
+        </div>
+    </section>
+
+    <section class="image2">
+        <div>
+            <h1>Exceptional Design</h1>
+            <p>Crafted with precision and elegance, Product 3 redefines what it means to blend technology and design.</p>
+        </div>
+    </section>
+
+    <section class="image3">
+        <div>
+            <h1>Performance Redefined</h1>
+            <p>Product 3 offers performance beyond imagination, delivering the speed and efficiency you’ve always desired.</p>
+        </div>
+    </section>
+
+    <!-- Footer，添加“Back to Home”按钮 -->
+    <footer>
+        <a href="index.html" class="btn">Back to Home</a>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
